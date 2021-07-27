@@ -6,8 +6,8 @@ var TaskSchema = Schema ({
     prof_name: String, 
     description: String, 
     grade:{
-        type: Boolean, // cambiar a number
-        default:false
+        type: Number, // cambiar a number
+        default:0
     }
 }); 
 
