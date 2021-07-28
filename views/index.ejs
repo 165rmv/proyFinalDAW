@@ -16,6 +16,7 @@
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Calificación</th>
+                <th>Materia</th>
                 <th>Operaciones</th>
             </tr>
         </thead>
@@ -27,6 +28,7 @@
                     <td> <%= i+1 %> </td>
                     <td> <a href="/ve-profe/<%= pr[i]._id%>"> <%= pr[i].prof_name %> </a> </td> <!--agregar link a ruta /ve-profe/<%= pr[i]._id%>-->
                     <td> <%= pr[i].grade %> </td>
+                    <td> <%= pr[i].materia %> </td>
                     <td>
                         <a href="/edit/<%= pr[i]._id%>" class="btn btn-info">Edit</a>
                         <a href="/delete/<%= pr[i]._id%>" class="btn btn-danger">Delete</a>
