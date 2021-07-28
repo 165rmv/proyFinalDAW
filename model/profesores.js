@@ -11,4 +11,4 @@ var ProfSchema = Schema ({
     }
 }); 
 
-module.exports = mongoose.model('tasks', ProfSchema); 
+module.exports = mongoose.model('pr', ProfSchema); 

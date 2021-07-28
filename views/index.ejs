@@ -6,18 +6,43 @@
 </div>
 
 <h4> Profesores: </h4>
-<div id="contenedor"> <!--placeholder para desplegar a profes-->
-    <table>
-        <tr>
-            <th>#</th>
-            <th>Nombre</th>
-            <th>Calificación</th>
-        </tr>
-        <tr>
-            <td>ejemplo #</td>
-            <td> <a href="/ve-profe">ejemplo nombre</a> </td> <!--referencia a link dinámico y ruta /ve-profe-->
-            <td>ejemplo calif</td>
-        </tr>
+<div  class="col-md-7" id="contenedor"> <!--placeholder para desplegar a profes-->
+    <table class= "table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Calificación</th>
+                <th>Operaciones</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <!--
+            <tr>
+                <td> #prueba </td>
+                <td> nombre prueba  </td>  
+                <td> calif prueba </td>
+                <td>
+                    <a href="/edit" class="btn btn-danger">Edit</a>
+                    <a href="/delete" class="btn btn-info">Delete</a>
+                </td>
+            </tr>
+            -->
+            <% for (var i = 0; i < pr.length; i++) {   %>
+                <tr>
+                    <td> <%= i+1 %> </td>
+                    <td> <%= pr[i].prof_name %> </td> 
+                    <td> <%= pr[i].grade %> </td>
+                    <td>
+                        <a href="/edit/<%= pr[i]._id%>" class="btn btn-danger">Edit</a>
+                        <a href="/delete/<%= pr[i]._id%>" class="btn btn-info">Delete</a>
+                    </td>
+                </tr>
+                <% } %>
+        </tbody>
+       
+        
     </table>
 </div>
 
