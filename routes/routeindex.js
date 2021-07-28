@@ -14,9 +14,14 @@ app.get('/', async function(req,res){
 // toma a profesor seleccionado y despliega su info en una página con ruta dinámica
 app.get("/ve-profe/:id", async (req,res)=>{
     var id = req.params.id; 
-    var profesor = await pr.findById(id); 
-    res.render('ve-profe', {profesor})
+    var pr = await pr.findById(id); 
+    res.render('ve-profe', {pr})
 }); 
 
+app.get("/delete/:id", async (req,res)=>{
+    var id = req.params.id; 
+    await Prof.remove({_id: id});
+    res.redirect("/");  
+}); 
 
 module.exports = app;

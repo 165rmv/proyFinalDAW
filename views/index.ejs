@@ -18,21 +18,11 @@
         </thead>
         
         <tbody>
-            <!--
-            <tr>
-                <td> #prueba </td>
-                <td> nombre prueba  </td>  
-                <td> calif prueba </td>
-                <td>
-                    <a href="/edit" class="btn btn-danger">Edit</a>
-                    <a href="/delete" class="btn btn-info">Delete</a>
-                </td>
-            </tr>
-            -->
+
             <% for (var i = 0; i < pr.length; i++) {   %>
                 <tr>
                     <td> <%= i+1 %> </td>
-                    <td> <%= pr[i].prof_name %> </td> 
+                    <td> <%= pr[i].prof_name %> </td> <!--agregar link a ruta /ve-profe/<%= pr[i]._id%>-->
                     <td> <%= pr[i].grade %> </td>
                     <td>
                         <a href="/edit/<%= pr[i]._id%>" class="btn btn-danger">Edit</a>
