@@ -4,7 +4,10 @@
     <h3> Acerca de nosotros</h3>
     <p> Nosotros somos un sitio que busca comunicar a los alumnos para calificar a sus profesores y ayudarlos a tener un semestre exitoso. </p>
 </div>
-
+<div id="seccion-crear">
+    <h3> Crea una entrada al portal</h3>
+    <a href="/crea-profe"><button class="btn btn-primary btn-lg"> Agrega a un profesor</button></a>
+</div>
 <h4> Profesores: </h4>
 <div  class="col-md-7" id="contenedor"> <!--placeholder para desplegar a profes-->
     <table class= "table table-bordered table-hover">
@@ -25,8 +28,8 @@
                     <td> <%= pr[i].prof_name %> </td> <!--agregar link a ruta /ve-profe/<%= pr[i]._id%>-->
                     <td> <%= pr[i].grade %> </td>
                     <td>
-                        <a href="/edit/<%= pr[i]._id%>" class="btn btn-danger">Edit</a>
-                        <a href="/delete/<%= pr[i]._id%>" class="btn btn-info">Delete</a>
+                        <a href="/edit/<%= pr[i]._id%>" class="btn btn-info">Edit</a>
+                        <a href="/delete/<%= pr[i]._id%>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <% } %>
