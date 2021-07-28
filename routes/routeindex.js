@@ -15,7 +15,7 @@ app.get('/crea-profe', (req, res)=>{
 }); 
 
 
-app.post('/add', (req,res)=>{
+app.post('/add', async (req,res)=>{
     var pr = new Prof(req.body); 
     pr.save(); 
     res.redirect('/'); 
@@ -35,5 +35,19 @@ app.get("/delete/:id", async (req,res)=>{
     await Prof.remove({_id: id});
     res.redirect("/");  
 }); 
+
+app.get("/edit/:id", async(req,res)=>{
+    var id = req.params.id; 
+    var pr = await Prof.findById(id);
+    res.render('edit',{pr})
+}); 
+
+app.post('/edit/:id', async(req,res) =>{
+    var id = req.params.id; //req.body
+    await Prof.updateOne({_id: id}, req.body)
+    res.redirect('/')
+}); 
+
+
 
 module.exports = app;

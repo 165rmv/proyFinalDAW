@@ -1,5 +1,30 @@
 <%- include ("./templates/_header") %>
 
-
+<div class="container">
+    <div class="row">
+      <!--FORM-->
+      <div class="col-md-5 offset-md-3">
+        <div class="card">
+          <div class="card-body">
+            <form action="/edit/<%= pr._id   %>" method="post">
+              <div class="form-group">
+                <input class="form-control" type="text" name="prof_name" placeholder="Agrega el nombre del profesor" value="<%= pr.prof_name   %>">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="description" cols="80"
+                  placeholder="Agrega una Descripción"><%= pr.description   %></textarea>
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="number" name="grade" placeholder="Calificación" min="0" max="10" value="<%= pr.grade %>" >
+             </div>
+              <button class="btn btn-primary" type="submit">
+                Update 
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <%- include ("./templates/_footer") %>
