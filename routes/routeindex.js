@@ -24,7 +24,7 @@ app.post('/add', async (req,res)=>{
 // toma a profesor seleccionado y despliega su info en una página con ruta dinámica
 app.get("/ve-profe/:id", async (req,res)=>{
     var id = req.params.id; 
-    var pr = await pr.findById(id); 
+    var pr = await Prof.findById(id); 
     res.render('ve-profe', {pr})
 }); 
 

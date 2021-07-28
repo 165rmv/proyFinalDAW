@@ -25,7 +25,7 @@
             <% for (var i = 0; i < pr.length; i++) {   %>
                 <tr>
                     <td> <%= i+1 %> </td>
-                    <td> <%= pr[i].prof_name %> </td> <!--agregar link a ruta /ve-profe/<%= pr[i]._id%>-->
+                    <td> <a href="/ve-profe/<%= pr[i]._id%>"> <%= pr[i].prof_name %> </a> </td> <!--agregar link a ruta /ve-profe/<%= pr[i]._id%>-->
                     <td> <%= pr[i].grade %> </td>
                     <td>
                         <a href="/edit/<%= pr[i]._id%>" class="btn btn-info">Edit</a>
