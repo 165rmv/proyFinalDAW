@@ -16,24 +16,32 @@
 
         <nav class="navbar navbar-dark bg-dark mb-4">
             <a class="navbar-brand" href="/">MIS PROFES 2.0</a>
-            <a href="/register"><button type="button" class="btn btn-success">Register</button></a>
+            <a href="/login"><button type="button" class="btn btn-success">Log-in</button></a>
           </nav>
 
         <section class="login-block">
         <div class="container">
 	        <div class="row ">
 		        <div class="col login-sec">
-		            <h2 class="text-center">Login Now</h2>
-		            <form class="login-form">
+		            <h2 class="text-center">Register</h2>
+		            <form class="login-form" action="/addUser" method="POST">
                         <div class="form-group">
-                            <label for="exampleInputEmail1" class="text-uppercase">Username</label>
+                            <label for="exampleInput1" class="text-uppercase">Username</label>
                             <input name="username" type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="text-uppercase">Email</label>
+                            <input name="email" type="email" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1" class="text-uppercase">Password</label>
                             <input name="password" type="password" class="form-control" placeholder="">
                         </div>
-                        <div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                            <input name="admin" type="checkbox" class="form-check-input" value="true">
+                            <small>Are you Admin?</small>
+                            </label>
                             <button type="submit" class="btn btn-login float-right">Submit</button>
                         </div>
                     </form>

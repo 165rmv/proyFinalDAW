@@ -1,0 +1,36 @@
+<%- include ("./templates/_header") %>
+
+<div id="about-us">
+    <h3> Acerca de nosotros</h3>
+    <p> Nosotros somos un sitio que busca comunicar a los alumnos para calificar a sus profesores y ayudarlos a tener un semestre exitoso. </p>
+</div>
+<h4> Profesores: </h4>
+<div  class="col-md-7" id="contenedor"> <!--placeholder para desplegar a profes-->
+    <table class= "table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Calificación</th>
+                <th>Materia</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+
+            <% for (var i = 0; i < pr.length; i++) {   %>
+                <tr>
+                    <td> <%= i+1 %> </td>
+                    <td> <a href="/ve-profe/<%= pr[i]._id%>"> <%= pr[i].prof_name %> </a> </td> <!--agregar link a ruta /ve-profe/<%= pr[i]._id%>-->
+                    <td> <%= pr[i].grade %> </td>
+                    <td> <%= pr[i].materia %> </td>
+                </tr>
+                <% } %>
+        </tbody>
+       
+        
+    </table>
+</div>
+
+
+<%- include ("./templates/_footer") %>
