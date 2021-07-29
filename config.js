@@ -5,7 +5,7 @@ const config = {
     }, 
 
     db: {
-        connectionUrl: process.env.MONGO_URL || 'mongodb://localhost/crud-mongo'
+        connectionUrl: process.env.MONGO_URL || 'mongodb://localhost/tu-profe'
     }
 }
 

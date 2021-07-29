@@ -1,5 +1,5 @@
-const { Double } = require("bson");
-const mongoose = require("mongoose");
+// const { Double } = require("bson");
+var mongoose = require("mongoose");
 var Schema = mongoose.Schema; 
 
 var ProfSchema = Schema ({
