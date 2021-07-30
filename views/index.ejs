@@ -1,4 +1,4 @@
-<%- include ("./templates/_header") %>
+<%- include ("./templates/_headerHome") %>
 
 <div id="about-us">
     <h3> Acerca de nosotros</h3>
@@ -7,6 +7,9 @@
 <div id="seccion-crear">
     <h3> Crea una entrada al portal</h3>
     <a href="/crea-profe"><button class="btn btn-primary btn-lg"> Agrega a un profesor</button></a>
+    <% if (isAdmin === true) { %>
+        <a href="/deleteUser"><button class="btn btn-info btn-lg"> Eliminar usuarios</button></a>
+    <% } %>
 </div>
 <h4> Profesores: </h4>
 <div  class="col-md-7" id="contenedor"> <!--placeholder para desplegar a profes-->

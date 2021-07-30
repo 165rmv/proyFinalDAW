@@ -6,9 +6,10 @@ var UserSchema = Schema ({
     username: String,
     email: String,
     password: String,
-    admin: Boolean,
-    default: false
-    
+    admin:{
+        type: Boolean,
+        default: false    
+    } 
 });
 
 UserSchema.methods.encryptPassword = function(password) {

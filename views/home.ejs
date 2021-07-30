@@ -1,5 +1,12 @@
-<%- include ("./templates/_header") %>
+<%- include ("./templates/_headerHome") %>
 
+<% if (data !== undefined) { %>
+    <div id="seccion-mycomments">
+        <p>
+            <a href="/index"><button class="btn btn-warning"> Mis calificaciones</button></a>
+        </p>
+    </div>  
+  <% } %>
 <div id="about-us">
     <h3> Acerca de nosotros</h3>
     <p> Nosotros somos un sitio que busca comunicar a los alumnos para calificar a sus profesores y ayudarlos a tener un semestre exitoso. </p>
