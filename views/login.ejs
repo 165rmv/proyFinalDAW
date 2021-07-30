@@ -6,11 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-
+    <title>Login</title>
     </head>
     <body>
 
@@ -24,7 +24,7 @@
 	        <div class="row ">
 		        <div class="col login-sec">
 		            <h2 class="text-center">Login Now</h2>
-		            <form class="login-form">
+		            <form class="login-form" action="/login" method="POST">
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="text-uppercase">Username</label>
                             <input name="username" type="text" class="form-control" placeholder="">
