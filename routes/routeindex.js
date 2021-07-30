@@ -30,6 +30,16 @@ app.get('/index', verify, async (req,res)=>{
 });
 
 
+app.get('/deleteUser', verify, async (req,res)=>{
+    var users = await User.find(); 
+    var data = req.cookies.token;
+    console.log(data)
+
+    console.log(users); 
+    res.render("deleteUser",{users, data}); 
+});
+
+
 //=================== Usuarios ===================
 app.get('/login', function(req,res){
     res.render('login');
@@ -71,8 +81,12 @@ app.post('/addUser',async function(req,res){
   var user = new User(req.body);
   user.password = user.encryptPassword(user.password);
 
-  await user.save();
+  //await user.save();
+  user.save(function (err) {
+    //mensaje de error en la terminal
+    console.log(err);
   res.redirect('/login');
+  })
 });
 
 app.get('/logoff',  async (req,res) =>{
@@ -87,7 +101,6 @@ app.get('/logoff',  async (req,res) =>{
 app.get('/crea-profe', (req, res)=>{
     res.render("crea-profe")
 }); 
-
 
 app.post('/add', verify, async (req,res)=>{
     var pr = new Prof(req.body); 
