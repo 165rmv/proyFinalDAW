@@ -1,15 +1,15 @@
 <%- include ("./templates/_headerHome") %>
 
+<% if (data !== undefined) { %>
+    <div id="seccion-mycomments">
+        <p>
+            <a href="/index"><button class="btn btn-warning"> Mis calificaciones</button></a>
+        </p>
+    </div>  
+  <% } %>
 <div id="about-us">
     <h3> Acerca de nosotros</h3>
     <p> Nosotros somos un sitio que busca comunicar a los alumnos para calificar a sus profesores y ayudarlos a tener un semestre exitoso. </p>
-</div>
-<div id="seccion-crear">
-    <h3> Crea una entrada al portal</h3>
-    <a href="/crea-profe"><button class="btn btn-primary btn-lg"> Agrega a un profesor</button></a>
-    <% if (isAdmin === true) { %>
-        <a href="/deleteUser"><button class="btn btn-info btn-lg"> Eliminar usuarios</button></a>
-    <% } %>
 </div>
 <h4> Profesores: </h4>
 <div  class="col-md-7" id="contenedor"> <!--placeholder para desplegar a profes-->
@@ -20,7 +20,6 @@
                 <th>Nombre</th>
                 <th>Calificación</th>
                 <th>Materia</th>
-                <th>Operaciones</th>
             </tr>
         </thead>
         
@@ -32,10 +31,6 @@
                     <td> <a href="/ve-profe/<%= pr[i]._id%>"> <%= pr[i].prof_name %> </a> </td> <!--agregar link a ruta /ve-profe/<%= pr[i]._id%>-->
                     <td> <%= pr[i].grade %> </td>
                     <td> <%= pr[i].materia %> </td>
-                    <td>
-                        <a href="/edit/<%= pr[i]._id%>" class="btn btn-info">Edit</a>
-                        <a href="/delete/<%= pr[i]._id%>" class="btn btn-danger">Delete</a>
-                    </td>
                 </tr>
                 <% } %>
         </tbody>
