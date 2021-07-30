@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/165rmv/proyFinalDAW.git"
+    "url": "https://github.com/165rmv/proyFinalDAW.git"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongo": "^0.1.0",
     "mongoose": "^5.13.3",
+    "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.10.0"
   }
 }
