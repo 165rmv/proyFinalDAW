@@ -125,6 +125,12 @@ app.get("/delete/:id", async (req,res)=>{
     res.redirect("/");  
 }); 
 
+app.get("/delete2/:id", async (req,res)=>{
+  var id = req.params.id; 
+  await User.remove({_id: id});
+  res.redirect("/");  
+}); 
+
 app.get("/edit/:id", async(req,res)=>{
     var id = req.params.id; 
     var pr = await Prof.findById(id);
